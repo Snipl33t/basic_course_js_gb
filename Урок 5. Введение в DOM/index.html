@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework 5</title>
+</head>
+
+<body onload="chessBoard.attachAnchor(document.getElementById('chess_board'))">
+  <!-- <body onload="basket.attachAnchor(document.getElementById('basket'))"> -->
+  <h1>Домашнее задание 5</h1>
+  <h2>Задание 1:</h2>
+  <p>Создать функцию, генерирующую шахматную доску. При этом можно использовать любые html-теги по своему желанию. Доска
+    должна быть разлинована соответствующим образом, т.е. чередовать черные и белые ячейки. Строки должны нумероваться
+    числами от 1 до 8, столбцы – латинскими буквами A, B, C, D, E, F, G, H.</p>
+  <input type="button" value="Создать доску" onclick="chessBoard.createBoard(document.getElementById('chess_board'))">
+
+  <div id="chess_board"></div>
+  <br><br>
+
+  <h2>Задание 2:</h2>
+  <p>Для игры, реализованной на уроке, исправить баг. (Игра работала еще на том уроке в дз) <input type="button"
+      value="Играть!" onclick="game.start()"></p>
+  <ul id="log"></ul>
+  <br><br>
+
+  <script src="homework5.js"></script>
+  <script src="game.js"></script>
+</body>
+
+</html>
