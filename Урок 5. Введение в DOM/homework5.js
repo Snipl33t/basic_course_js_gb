@@ -1,3 +1,5 @@
+const chessObj = document.getElementById('chess_board');
+
 const chessBoard = {
     columnNames: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'],
     fields: {},
@@ -86,7 +88,7 @@ const chessBoard = {
         this.fields[row][column] = cell;
     },
 
-    createBoard(anchor) {
+    createBoard() {
         let prevField = '';
         const tableElement = document.createElement('table');
         tableElement.style.margin = 'auto';
@@ -125,6 +127,13 @@ const chessBoard = {
         }
 
         tableElement.appendChild(tableBody);
-        anchor.appendChild(tableElement);
+        chessObj.appendChild(tableElement);
     },
 }
+
+
+chessObj.addEventListener("click", ({ target }) => {
+    if (target.tagName === "BUTTON") {
+        chessBoard.createBoard();
+    }
+});

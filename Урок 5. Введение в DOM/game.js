@@ -148,6 +148,8 @@ const nodes = [
 // 3. prompt next question and options
 // 4. if nextText === -1, then start again
 
+const gameButton = document.getElementById("button_task_2");
+
 const game = {
   textNodes: nodes,
   logList: document.getElementById('log'),
@@ -193,3 +195,7 @@ const game = {
     this.logList.appendChild(li);
   }
 };
+
+gameButton.addEventListener("click", () => {
+  game.start();
+});
