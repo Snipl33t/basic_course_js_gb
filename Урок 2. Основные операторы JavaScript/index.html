@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 2</title>
+</head>
+
+<body>
+    <h1>Домашнее задание 2</h1>
+    <h2>Задание 1:</h2>
+    <p>Дан код: </p>
+    <p>var a = 1, b = 1, c, d;</p>
+    <p>c = ++a; alert(c); // 2</p>
+    <p>c = ++a; alert(c); // 2</p>
+    <p>d = b++; alert(d); // 1</p>
+    <p>c = (2+ ++a); alert(c); // 5</p>
+    <p>d = (2+ b++); alert(d); // 4</p>
+    <p>alert(a); // 3</p>
+    <p>alert(b); // 3</p>
+    <p>Почему код даёт именно такие результаты?</p>
+    <p>Ответ: ++a сначала инкрементирует а, а затем производятся остальные операции. b++ сначала выполняются все
+        операции с
+        b, а по завершению b инкрементруется.</p>
+    <br><br>
+
+    <h2>Задание 2:</h2>
+    <p>Чему будет равен x в примере ниже?</p>
+    <p>var a = 2;</p>
+    <p>var x = 1 + (a *= 2);</p>
+    <p>Х будет равен 5. <input type="button" onclick="checkValue()" value="Проверить"></p>
+    <br><br>
+
+    <h2>Задание 3:</h2>
+    <p>Объявить две целочисленные переменные a и b и задать им произвольные начальные значения. Затем написать скрипт,
+        который работает по следующему принципу:</p>
+    <p>если a и b положительные, вывести их разность;</p>
+    <p>если а и b отрицательные, вывести их произведение;</p>
+    <p>если а и b разных знаков, вывести их сумму; ноль можно считать положительным числом.</p>
+    <p>Введите значение переменной a: <input type="number" value="123" id="a"> </p>
+    <p>Введите значение переменной b: <input type="number" value="423" id="b"> </p>
+    <input type="button"
+        onclick="compareValues(Number(document.getElementById('a').value), Number(document.getElementById('b').value))"
+        value="Выполнить"> <br>
+
+    <br><br>
+
+
+    <h2>Задание 4:</h2>
+    <p>Присвоить переменной а значение в промежутке [0..15]. С помощью оператора switch организовать вывод чисел от a до
+        15.</p>
+    <p>Введите значение переменной a от 0 до 15: <input type="number" value="12" id="a4"> </p>
+    <input type="button" onclick="switchTest(Number(document.getElementById('a4').value))" value="Выполнить"></p>
+    <br><br>
+
+    <h2>Задание 5:</h2>
+    <p>Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. Обязательно использовать
+        оператор return.</p>
+    <p>Введите значение переменной a: <input type="number" value="16" id="a5"> </p>
+    <p>Введите значение переменной b: <input type="number" value="2" id="b5"> </p>
+    <input type="button"
+        onclick="basicArithmetics(Number(document.getElementById('a5').value), Number(document.getElementById('b5').value))"
+        value="Выполнить"> <br>
+    <br><br>
+
+    <h2>Задание 6:</h2>
+    <p>Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения
+        аргументов, operation – строка с названием операции. В зависимости от переданного значения операции выполнить
+        одну из арифметических операций (использовать функции из пункта 3) и вернуть полученное значение (использовать
+        switch).</p>
+    <p>Введите значение переменной arg1: <input type="number" value="16" id="arg1"> </p>
+    <p>Введите значение переменной arg2: <input type="number" value="2" id="arg2"> </p>
+    <p>Введите значение переменной operation: <input type="text" value="sum" id="operation"> </p>
+    <input type="button"
+        onclick="alert(mathOperation(Number(document.getElementById('arg1').value), Number(document.getElementById('arg2').value), document.getElementById('operation').value))"
+        value="Выполнить"> <br>
+    <br><br>
+
+    <h2>Задание 7*:</h2>
+    <p>Сравнить null и 0. Попробуйте объяснить результат.</p>
+    <input type="button" onclick="alert(zeroAndNull())" value="Сравнить"> <br>
+    <p>Возвращает false, тк 0 это не налл. 0 - физическое значение, оно занимает место в памяти, а налл означает, что
+        либо память на значение не выделенна, либо оно не присвоенно.</p>
+    <p>Хотя после Си я бы, конечно, сказал, что даже если у нас место выделенно на переменную, то там в любом случае
+        лежат какие то значения (может и мусор), но налл - это когда указатель на переменную показывает в никудаю. Как
+        то так.</p>
+    <br><br>
+
+    <h2>Задание 8*:</h2>
+    <p>С помощью рекурсии организовать функцию возведения числа в степень. Формат: function power(val, pow), где val –
+        заданное число, pow – степень.</p>
+    <p>Введите значение переменной val: <input type="number" value="2" id="val"> </p>
+    <p>Введите значение переменной pow: <input type="number" value="8" id="pow"> </p>
+    <input type="button"
+        onclick="alert(power(Number(document.getElementById('val').value), Number(document.getElementById('pow').value)))"
+        value="Выполнить"> <br>
+    <br><br>
+
+    <script src="homework2.js"></script>
+</body>
+
+</html>
