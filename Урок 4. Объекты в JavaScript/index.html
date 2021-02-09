@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework 4</title>
+</head>
+
+<body onload="basket.attachAnchor(document.getElementById('basket'))">
+  <h1>Домашнее задание 4</h1>
+  <h2>Задание 1:</h2>
+  <p>Написать функцию, преобразующую число в объект. Передавая
+    на вход число от 0 до 999, надо получить на выходе объект, в
+    котором в соответствующих свойствах описаны единицы, десятки
+    и сотни. Например, для числа 245 надо получить следующий
+    объект: {‘единицы’: 5, ‘десятки’: 4, ‘сотни’: 2}. Если число
+    превышает 999, необходимо выдать соответствующее сообщение
+    с помощью console.log и вернуть пустой объект.</p>
+  <p>Введите число от 0 до 999: <input type="number" id="task_1">
+    <input type="button" value="Ввод"
+      onclick="document.getElementById('num').innerHTML = JSON.stringify(numberToObject(Number(document.getElementById('task_1').value)))">
+  </p>
+  <p>Результат: <span id="num">0</span></p>
+  <br><br>
+
+  <h2>Задание 2, 3*:</h2>
+  <p>С этого урока начинаем работать с функционалом интернет-магазина. Предположим, есть сущность корзины. Нужно
+    реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров.</p>
+  <p>Товары в корзине хранятся в массиве. Задачи:</p>
+  <p>a) Организовать такой массив для хранения товаров в корзине;</p>
+  <p>b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины.</p>
+  <p>Товары в корзине:</p>
+  <ul id="basket">
+    <li id="basket_element_1"><input type="text" value="Бананы" id="basket_element_1_name">: цена за шт: <input
+        type="number" value="50.2" id="basket_element_1_price">, количество: <input type="number" value="7"
+        id="basket_element_1_amount">
+    </li>
+  </ul>
+  <input type="button" value="Добавить новый товар" onclick="basket.saveElement(); basket.createElement();">
+  <input type="button" value="Посчитать"
+    onclick="basket.countTotalPrice(); document.getElementById('total_price').innerHTML = basket.getTotalPrice()">
+  <p>Общая стоимость: <span id="total_price">0</span> рублей.</p>
+  <br><br>
+
+  <h2>Задание 4*:</h2>
+  <p>Для игры, реализованной на уроке, добавить возможность вывода хода номер n (номер задается пользователем)</p>
+  <p>Введите номер хода от 1 до 11: <input type="number" id="turn">
+    <input type="button" value="Выберите ход"
+      onclick="game.displayQuestion(Number(document.getElementById('turn').value))">
+  </p>
+  <br><br>
+
+  <h2>Задание 5*:</h2>
+  <p>На базе игры, созданной на уроке, реализовать игру «Кто хочет стать миллионером?</p><br>
+  <p>К сожалению времени особо нынче нет, экзамены в универе, поэтому не получилось сделать свою игру и просто
+    прикладываю сюда рабочую версию игры с урока.</p>
+  <input type="button" onclick="game.start()" value="Играть в игру!"> <br>
+  <br><br>
+
+  <script src="homework4.js"></script>
+  <script src="game.js"></script>
+</body>
+
+</html>
