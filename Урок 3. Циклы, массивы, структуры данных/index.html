@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 2</title>
+</head>
+
+<body>
+    <h1>Домашнее задание 3</h1>
+    <h2>Задание 1:</h2>
+    <p>С помощью цикла while вывести все простые числа в промежутке от 0 до 100.</p>
+    <p>Текущее число: <span id="num">0</span></p>
+    <input type="button" onclick="displaySimpleUptoHundred(document.getElementById('num'))" value="Выполнить"> <br>
+    <br><br>
+
+    <h2>Задание 2, 3:</h2>
+    <p>С этого урока начинаем работать с функционалом интернет-магазина. Предположим, есть сущность корзины. Нужно
+        реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров.</p>
+    <p>Товары в корзине хранятся в массиве. Задачи:</p>
+    <p>a) Организовать такой массив для хранения товаров в корзине;</p>
+    <p>b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины.</p>
+    <p>Товары в корзине:</p>
+    <ul id="bascet">
+        <li id="bascet_element_1"><input type="text" value="Бананы" id="bascet_element_1_name">: цена за шт: <input
+                type="number" value="50.2" id="bascet_element_1_price">, количество: <input type="number" value="7"
+                id="bascet_element_1_amount">
+        </li>
+    </ul>
+    <input type="button" value="Добавить новый товар" onclick="createNewElement(document.getElementById('bascet'))">
+    <!-- <input type="button" value="Посчитать"
+        onclick="alert(document.getElementById('bascet').getElementsByTagName('li').length)"> -->
+    <input type="button" value="Посчитать"
+        onclick="document.getElementById('total_price').innerHTML = Math.round(countBasketPrice(document.getElementById('bascet')) * 100) / 100">
+    <!-- <input type="button" value="Посчитать" onclick="alert(countBasketPrice(document.getElementById('bascet')))"> -->
+    <p>Общая стоимость: <span id="total_price">0</span> рублей.</p>
+    <!-- <p>Яблоки: <input type="number" value="3" id="apples_amount">, цена за шт. <input type="number" value="50.2"
+            id="apples_price">, итого: <span id="apples_total_cost">0</span></p>
+    <p>Бананы: <input type="number" value="7" id="bananas_amount">, цена за шт. <input type="number" value="70.92"
+            id="bananas_price">, итого: <span id="bananas_total_cost">0</span></p> -->
+    <br><br>
+
+    <h2>Задание 4*:</h2>
+    <p>Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла. Выглядеть это должно так:</p>
+    <p>for(…){// здесь пусто}</p>
+    <input type="button" onclick="outputFrom0To9()" value="Выполнить"></p>
+    <br><br>
+
+    <h2>Задание 5*:</h2>
+    <p>Нарисовать пирамиду с помощью console.log, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов,
+        а не 5:</p>
+    <p>x</p>
+    <p>xx</p>
+    <p>xxx</p>
+    <p>xxxx</p>
+    <p>xxxxx</p>
+    <input type="button" onclick="logPyramid()" value="Выполнить"> <br>
+    <br><br>
+
+    <script src="homework3.js"></script>
+</body>
+
+</html>
