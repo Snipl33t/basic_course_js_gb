@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 1</title>
+</head>
+
+<body>
+    <h1>Домашнее задание 1</h1>
+    <p>Здесь представленно домашнее задание 1 в формате веб страницы для удобства решения и проверки.</p>
+
+    <h2>Задание 1:</h2>
+    <p>Задать температуру в градусах по Цельсию. Вывести в alert соответствующую температуру в градусах по Фаренгейту.
+        Подсказка: расчёт идёт по формуле: Tf = (9 / 5) * Tc + 32, где Tf – температура по Фаренгейту, Tc – температура
+        по Цельсию</p>
+    <br>
+    Введите температуру в цельсиях: <input type="text" value="23" id="firstTask"> <input type="button"
+        onclick="translateToFahrenheit(document.getElementById('firstTask').value)" value="Ввод"> <br>
+
+    <br><br>
+
+    <h2>Задание 2, 3:</h2>
+    <p>Объявить две переменные: admin и name. Записать в name строку "Василий"; Скопировать значение из name в admin.
+        Вывести admin (должно вывести «Василий»).</p>
+    <br>
+    Введите значение переменной name: <input type="text" value="Василий" id="secondTask"> <input type="button"
+        onclick="copyNameToAdmin(document.getElementById('secondTask').value)" value="Ввод"> <br>
+
+    <br><br>
+
+
+    <h2>Задание 4*:</h2>
+    <p>Чему будет равно JS-выражение 1000 + "108" <input type="button" onclick="alert(1000 + '108')" value="Узнать"></p>
+
+    <br><br>
+
+    <h2>Задание 5*:</h2>
+    <p>Самостоятельно разобраться с атрибутами тега script (async и defer)</p>
+    <br>
+    <p>Async указываем для асинхронной загрузки скрипта, т.е. как только он доступен - он запустится. Defer после
+        запускает скрипт после загрузки страницы</p>
+    <br>
+
+    <script src="homework1.js"></script>
+</body>
+
+</html>
